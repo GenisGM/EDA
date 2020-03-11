@@ -41,7 +41,7 @@ public class ApuestaPrimitiva {
                 }
             }
         }else{
-            combinacion = new LEGListaConPIOrdenada();
+            combinacion = new LEGListaConPIOrdenada<NumeroPrimitiva>();
             while(contador<6){
                 numero = new NumeroPrimitiva();
                 if(this.posicionDe(numero) == -1){

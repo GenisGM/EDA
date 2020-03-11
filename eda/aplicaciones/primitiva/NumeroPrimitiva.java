@@ -1,5 +1,5 @@
 package aplicaciones.primitiva;
-import java.lang.Comparable;
+
 import java.util.Random;
 
 /** NumeroPrimitiva: representa un numero entero
@@ -8,7 +8,7 @@ import java.util.Random;
  *  @version Febrero 2019
  */
 
-public class NumeroPrimitiva /* COMPLETAR */ {
+public class NumeroPrimitiva implements Comparable <NumeroPrimitiva>/* COMPLETAR */ {
     
     // Un NumeroPrimitiva TIENE UN int en el intervalo [1, 49]
     private int numero;
@@ -32,8 +32,9 @@ public class NumeroPrimitiva /* COMPLETAR */ {
      *              y false en caso contrario
      */
            
-    public boolean equals(int otro){
-        if(numero == otro){return true;}
+    public boolean equals(Object otro){
+        NumeroPrimitiva o = (NumeroPrimitiva) otro;
+        if(this.numero == o.numero){return true;}
         else {return false;}
     }
     
@@ -46,8 +47,8 @@ public class NumeroPrimitiva /* COMPLETAR */ {
      *         int > 0 si this es mayor que otro
      *          0      si this y otro son iguales
      */
-    public int compareTo(int otro){
-        return numero-otro;
+    public int compareTo(NumeroPrimitiva otro){
+        return this.numero-otro.numero;
     }
         
     /**
